@@ -1,0 +1,20 @@
+<h1 class="page-title">Contacts</h1>
+
+<div class="container-contact">  
+  <div layout="row" layout-wrap layout-align="center">
+    <md-input-container flex="40">
+      <label>Name</label>
+      <input type="text" name="name" value="" ng-model="name">
+    </md-input-container>
+
+    <md-input-container flex="40">
+      <label>Phone</label>
+      <input type="text" name="phone" value="" ng-model="phone">
+    </md-input-container>
+    <div flex="20">
+      <md-button flex="30" ng-click="addContact(name, phone)">Add</md-button>
+    </div>
+  </div>
+</div>
+
+<simple-grid options="options"></simple-grid>

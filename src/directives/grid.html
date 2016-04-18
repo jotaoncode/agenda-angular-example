@@ -1,0 +1,32 @@
+<div class="container">
+  <div layout-wrap layout="row" layout-align="center">
+    <div ng-repeat="contact in options.contacts track by contact.id"  flex="25" >
+      <md-card id="contact-{{contact.id}}">
+       <md-icon> face </md-icon>
+       <md-card-content>
+         <h2>Contact {{contact.name}}</h2>
+         <div ng-hide="editMode">
+           <p>Phone: {{contact.phone}}</p>
+         </div>
+         <div ng-show="editMode">
+           <md-input-container flex="40">
+             <label>Name</label>
+             <input type="text" value="{{contact.name}}" ng-model="newName">
+           </md-input-container>
+           <md-input-container flex="40">
+             <label>Phone</label>
+             <input type="text" value="{{contact.phone}}" ng-model="newPhone">
+           </md-input-container>
+           <md-button ng-click="options.update(contact.id, newName, newPhone); editMode = false">Accept</md-button>
+           <md-button ng-click="editMode = false">Cancel</md-button>
+         </div>
+       </md-card-content>
+       <md-card-actions layout="row" layout-align="end center"  ng-hide="editMode">
+         <md-button ng-click="editMode = true">Update</md-button>
+         <md-button ng-click="options.remove(contact.id)">Delete</md-button>
+         <md-button href="#contact/{{contact.id}}">Details</md-button>
+       </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>
