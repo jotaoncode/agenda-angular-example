@@ -1,6 +1,18 @@
-<div class="welcome">
-  <h1>Welcome to Belatrix Contacts!</h1>
-  <div class="options-welcome">
-    <md-button type="button" ng-href="#/contacts">Go To Contacts</md-button>
+<div class="container" layout="row" layout-wrap>
+  <div class="animation-container" flex="50">
+    <img src="./assets/images/ryu-ready-position.gif" alt="" class="ryu-ready play"/>
+    <img src="./assets/images/ryu-throwing-hadouken.png" alt="" class="ryu-throwing-hadouken stop"/>
+    <img src="./assets/images/hadouken.gif" alt="" class="hadouken stop"/>
+    <img src="./assets/images/ryu-cool.gif" alt="" class="ryu-cool stop"/>
+  </div>
+  <div class="welcome md-whiteframe-6dp" flex="50">
+    <h1>Welcome to Belatrix Contacts!</h1>
+    <div class="options-welcome">
+      <md-button type="button" ng-href="#/contacts">Go To Contacts</md-button>
+    </div>
+  </div>
+  <div class="box" flex="50">
+    <img src="./assets/images/box-image.jpg" alt="" />
+    <md-button type="button" ng-click="startAnimation()" class="start-animation">Start!</md-button>
   </div>
 </div>
